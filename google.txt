@@ -1,0 +1,34 @@
+
+이를테면 북조선이라는 키워드로 지난 1일을 timeframe으로 놓고 검색하면 
+아래와 같은 쿼리 스트링이 간다.
+
+https://www.google.com/search?as_q=%EB%B6%81%EC%A1%B0%EC%84%A0
+&as_epq=
+&as_oq=
+&as_eq=
+&as_nlo=
+&as_nhi=
+&lr=
+&cr=
+&as_qdr=d
+&as_sitesearch=
+&as_occt=any
+&safe=images
+&as_filetype=
+&as_rights=
+&gws_rd=ssl
+
+
+ 여기서 as_q 가 advanced search_ query 인 것 같고 %EB%B6%81%EC%A1%B0%EC%84%A0 가 
+북조선을 한글로 encode 한 것이다.
+
+ as_qdr 은 아마 query duration 이 아닐까 생각해 본다.
+
+ http://blog.slashpoundbang.com/post/12975232033/
+google-news-search-parameters-the-missing-manual
+
+ 이 링크를 보면 다른 옵션들에 대해서도 친절하게 설명되어 있다.
+
+
+ 자 이제 이걸 google.py 에 도입하자.
+

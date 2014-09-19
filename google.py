@@ -28,6 +28,9 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
+# 2014-09-19 ZD
+# "as_qdr=d" advanced search option for timeframe filtering. [1]
+
 __all__ = ['search']
 
 import os
@@ -49,10 +52,10 @@ BeautifulSoup = None
 
 # URL templates to make Google searches.
 url_home          = "http://www.google.%(tld)s/"
-url_search        = "http://www.google.%(tld)s/search?hl=%(lang)s&q=%(query)s&btnG=Google+Search"
-url_next_page     = "http://www.google.%(tld)s/search?hl=%(lang)s&q=%(query)s&start=%(start)d"
-url_search_num    = "http://www.google.%(tld)s/search?hl=%(lang)s&q=%(query)s&num=%(num)d&btnG=Google+Search"
-url_next_page_num = "http://www.google.%(tld)s/search?hl=%(lang)s&q=%(query)s&num=%(num)d&start=%(start)d"
+url_search        = "http://www.google.%(tld)s/search?hl=%(lang)s&q=%(query)s&as_qdr=d&btnG=Google+Search"
+url_next_page     = "http://www.google.%(tld)s/search?hl=%(lang)s&q=%(query)s&as_qdr=d&start=%(start)d"
+url_search_num    = "http://www.google.%(tld)s/search?hl=%(lang)s&q=%(query)s&as_qdr=d&num=%(num)d&btnG=Google+Search"
+url_next_page_num = "http://www.google.%(tld)s/search?hl=%(lang)s&q=%(query)s&as_qdr=d&num=%(num)d&start=%(start)d"
 
 # Cookie jar. Stored at the user's home folder.
 home_folder = os.getenv('HOME')
