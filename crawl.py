@@ -1,4 +1,6 @@
+# coding: utf-8
 # crawl.py : This script send the query to Google and save the result as a log file.
+
 from google import search
 import datetime
 import time
@@ -30,5 +32,5 @@ if __name__ == '__main__':
 	keywordFile = open('keyword.list', 'r')
 	for line in keywordFile:
 		GoogleAKeyword(line.rstrip('\n'), logfile)
-		time.sleep(60) # delays for 60 seconds -- to circumvent Google's blocking.
+		time.sleep(120) #  to circumvent Google's blocking.
 
